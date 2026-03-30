@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-retro-dark text-white font-mono;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-retro font-bold;
+  }
+}
+
+@layer components {
+  .retro-border {
+    @apply border-4 border-gold-accent;
+  }
+
+  .retro-box {
+    @apply border-4 border-purple-primary bg-retro-bg p-6 shadow-retro;
+  }
+
+  .hero-title {
+    @apply text-5xl md:text-6xl font-bold text-purple-light tracking-wider;
+    text-shadow: 3px 3px 0 rgba(168, 85, 247, 0.5);
+  }
+
+  .accent-text {
+    @apply text-gold-accent font-bold;
+  }
+
+  .section-divider {
+    @apply my-8 border-t-2 border-purple-primary opacity-50;
+  }
+}

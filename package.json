@@ -1,0 +1,29 @@
+{
+  "name": "misa-y-vermu-website",
+  "version": "1.0.0",
+  "description": "A retro pixel/TUI landing page for Misa Y Vermú",
+  "type": "module",
+  "scripts": {
+    "build": "tailwindcss -i input.css -o dist/style.css",
+    "watch": "tailwindcss -i input.css -o dist/style.css --watch",
+    "dev": "bun run server.ts",
+    "start": "bun run server.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.58.0",
+    "@typescript-eslint/parser": "^8.58.0",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "husky": "^9.1.7",
+    "postcss": "^8.4.31",
+    "prettier": "^3.8.1",
+    "tailwindcss": "^3.3.6"
+  }
+}

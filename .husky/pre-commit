@@ -1,0 +1,7 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running code quality checks..."
+bun run format
+bun run lint:fix
+echo "✓ Code quality checks complete"
