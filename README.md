@@ -23,6 +23,8 @@ misa-y-vermu-website/
 ├── eslint.config.js          # ESLint configuration (flat config)
 ├── .prettierrc                # Prettier configuration
 ├── .prettierignore           # Prettier ignore patterns
+├── .husky/                   # Git hooks (Husky)
+│   └── pre-commit            # Auto-format and lint before commits
 ├── dist/
 │   └── style.css            # Compiled Tailwind CSS (generated)
 ├── public/                   # Static assets (images, etc.)
@@ -98,6 +100,28 @@ Prettier configuration (.prettierrc) enforces:
 - 2-space indentation
 - 100-character line width
 - LF line endings
+
+### Git Hooks with Husky
+
+Husky automatically runs code quality checks before every commit:
+
+```bash
+# The pre-commit hook runs automatically when you commit
+git commit -m "Your message"
+# Runs: bun run format && bun run lint:fix
+```
+
+The `.husky/pre-commit` hook ensures:
+- All files are formatted with Prettier
+- ESLint issues are automatically fixed
+- Commits only happen if no formatting/linting errors remain
+
+You can also manually run these commands:
+
+```bash
+# Bypass the hook (not recommended)
+git commit --no-verify
+```
 
 ## Building for Deployment
 
