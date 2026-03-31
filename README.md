@@ -112,6 +112,7 @@ git commit -m "Your message"
 ```
 
 The `.husky/pre-commit` hook ensures:
+
 - All files are formatted with Prettier
 - ESLint issues are automatically fixed
 - Commits only happen if no formatting/linting errors remain
